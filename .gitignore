@@ -1,0 +1,41 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# IDE settings
+.idea/
+.vscode/settings.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Tests and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# AI experiment outputs and large local artifacts
+data/
+datasets/
+checkpoints/
+runs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
