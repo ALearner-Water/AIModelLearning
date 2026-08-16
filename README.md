@@ -61,10 +61,11 @@
 
 | 文件或目录 | 用途 |
 |---|---|
-| `PYTHON_TO_NUMPY_STUDY_GUIDE.md` | Python 到 NumPy 的学习指南与每日练习 |
-| `python_foundation_for_numpy.py` | 变量、列表、切片、循环、函数和列表推导式示例 |
-| `python_numpy_readiness_challenge.py` | 进入 NumPy 前的 Python 通关练习 |
-| `jupyter/` | Jupyter Notebook 练习 |
+| `Python/PYTHON_TO_NUMPY_STUDY_GUIDE.md` | Python 到 NumPy 的学习指南与每日练习 |
+| `Python/python_foundation_for_numpy.py` | 变量、列表、切片、循环、函数和列表推导式示例 |
+| `Python/python_numpy_readiness_challenge.py` | 进入 NumPy 前的 Python 通关练习 |
+| `Python/python_basics/` | 独立的 Python 基础知识练习 |
+| `Python/jupyter/Base_python.ipynb` | 按课程进度积累的 Python Notebook |
 
 开始 NumPy 前，应能在不照抄视频的情况下：
 
@@ -83,14 +84,15 @@
 ```text
 AIModelLearning/
 ├─ README.md
-├─ python_basics/       # Python语法与综合练习
+├─ Python/              # 当前Python课程、练习、指南与Notebook
+│  ├─ python_basics/    # 独立知识点练习
+│  └─ jupyter/          # Python Notebook
 ├─ numpy/               # NumPy练习与小实验
 ├─ pytorch/             # PyTorch基础与训练练习
 ├─ deep_learning/       # 深度学习课程实验
 ├─ algorithms/          # 算法与数据结构练习
 ├─ cs_foundations/      # 计算机基础课程笔记
-├─ notes/               # 总结、错题与阅读笔记
-└─ jupyter/             # Notebook实验
+└─ notes/               # 总结、错题与阅读笔记
 ```
 
 ## 日常使用方式
