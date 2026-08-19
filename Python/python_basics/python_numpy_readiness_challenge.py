@@ -9,27 +9,28 @@
 
 def celsius_to_fahrenheit(celsius):
     """把一个摄氏温度转换为华氏温度。公式：C * 1.8 + 32。"""
-    # TODO: 删除下一行，并返回计算结果。
-    raise NotImplementedError
+    return celsius*1.8+32
 
 
 def average(values):
     """返回一组数字的平均值。可使用 sum() 和 len()。"""
-    # TODO: 删除下一行，并返回平均值。
-    raise NotImplementedError
+    return sum(values)/len(values)
 
 
 def filter_at_least(values, minimum):
     """返回大于或等于 minimum 的所有数字组成的新列表。"""
-    # TODO: 删除下一行，可使用循环或列表推导式。
-    raise NotImplementedError
-
+    new_list=[]
+    for x in values:
+        if(x>=minimum):
+            new_list.append(x)
+    return new_list
 
 def square_all(values):
     """返回所有数字的平方组成的新列表。"""
-    # TODO: 删除下一行，可使用循环或列表推导式。
-    raise NotImplementedError
-
+    new_list=[]
+    for x in values:
+        new_list.append(x**2)
+    return new_list
 
 def run_tests():
     """基础通关测试；不需要修改这个函数。"""
