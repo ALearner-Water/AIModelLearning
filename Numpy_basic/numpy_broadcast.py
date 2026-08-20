@@ -2,7 +2,7 @@
 import numpy as np
 # 1. 数组与数之间的计算
 a=np.random.randint(0,5,size=(3,5))
-print(a)
+#print(a)
 # 直接相乘
 # print(a*2)
 
