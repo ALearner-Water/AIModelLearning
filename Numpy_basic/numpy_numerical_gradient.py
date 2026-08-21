@@ -22,3 +22,4 @@ for i in range(5):
     w=w-learning_rate*gradient
     print(F"gradient={gradient}")
     print(f"w={w}")
+    print(f"loss={loss_of_w(w)}")
