@@ -14,6 +14,9 @@ env/
 .idea/
 .vscode/settings.json
 
+# Private local study context
+planning/
+
 # Jupyter
 .ipynb_checkpoints/
 
@@ -38,4 +41,3 @@ wandb/
 # Operating-system files
 .DS_Store
 Thumbs.db
-
