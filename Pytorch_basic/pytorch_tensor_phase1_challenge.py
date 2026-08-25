@@ -29,7 +29,7 @@ def tensor_profile(values):
 def reshape_batch(tensor):
     """把包含 24 个元素的 Tensor 整理为 shape (2, 3, 4)。"""
     # TODO
-    return torch.reshape((2,3,4))
+    return torch.reshape(tensor,(2,3,4))
 
 
 def extract_block(tensor):
