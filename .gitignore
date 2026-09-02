@@ -12,10 +12,18 @@ env/
 
 # IDE settings
 .idea/
-.vscode/settings.json
+.vscode/
 
 # Private local study context
+AGENTS.md
 planning/
+interview/
+output/
+tmp/
+
+# Local documents and rendered exports
+*.pdf
+*.docx
 
 # Jupyter
 .ipynb_checkpoints/
