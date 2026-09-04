@@ -16,7 +16,7 @@ class LinearDataset(Dataset):
 x=torch.tensor([[1.0],[2.0],[3.0],[4.0]])
 true_y=2*x+1
 dataset=LinearDataset(x,true_y)
-loader=DataLoader(dataset,batch_size=2  ,shuffle=False)   #从dataset里面拿样本，每个批次放两个样本，样本不打乱  true则是打乱样本重新组批
+loader=DataLoader(dataset,batch_size=2 ,shuffle=False)   #从dataset里面拿样本，每个批次放两个样本，样本不打乱  true则是打乱样本重新组批
 # 打印验证是不是变成批次了
 for batch_x,batch_true_y in loader:
     print(batch_x)
