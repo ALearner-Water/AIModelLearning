@@ -1,0 +1,13 @@
+import numpy as np
+x=np.array([[1.0],[2.0]])
+print(f"x.shape={x.shape},dtype={x.dtype}")
+y=np.array([[3.0],[4.0]])
+print(f"x+y={x+y}")
+z=np.array([1.0,2.0,3.0])
+print(f"x*z={x*z}")
+cat=np.concat([x,y],axis=1)
+print(f"cat={cat}")
+p=np.array([2.0,3.0]).reshape(1,2)
+print(f"x@p={x.dot(p)}")
+mse=np.mean((x-y)**2)
+print(f"mse={mse}")
