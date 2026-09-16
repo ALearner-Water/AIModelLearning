@@ -47,3 +47,6 @@ def train(optimizer,net,cross_entropy,epochs,train_loader):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
+optimizer=torch.optim.SGD([w,b],lr=0.01)
+epochs=500
+train(optimizer,net,cross_entropy,epochs,train_loader)
