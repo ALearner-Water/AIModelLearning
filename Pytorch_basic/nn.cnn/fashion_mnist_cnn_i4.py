@@ -31,6 +31,7 @@ def train(loader,model,fn_loss,optimizer,epochs):
             optimizer.step()
 
 def evaluate(loader,model,fn_loss):
+    checkpoint=None #保留第一个预测错误的地方
     model.eval()
     with torch.no_grad():
         data_size=0
@@ -44,9 +45,18 @@ def evaluate(loader,model,fn_loss):
             batch_size=len(img)
             full_loss+=loss.item()*batch_size
             data_size+=batch_size
-            batch_accuracy=(torch.argmax(logits,dim=1)==labels).float().mean()
+            pred=torch.argmax(logits,dim=1)     #这里只是预测的类别下标
+            batch_accuracy=(pred==labels).float().mean()    #这里就看有没有相等，转成布尔值
             accuracy+=batch_accuracy.item()*batch_size
-        return full_loss/data_size,accuracy/data_size
+
+            #求预测错误的地方 
+            if (checkpoint==None):
+                for pred_label,true_label,img in zip(pred,labels,img):
+                    if(pred_label!=true_label):
+                        checkpoint=(img.cpu(),pred_label.item(),true_label.item()) 
+                        break
+
+        return full_loss/data_size,accuracy/data_size,checkpoint
 
 dataset=torchvision.datasets.FashionMNIST(root=r"D:\53507\PythonAIModelLearning\Pytorch_basic\nn.cnn",train=True,transform=torchvision.transforms.ToTensor(),download=True)
 train_set, val_set = random_split(dataset, lengths=[50000, 10000], generator=torch.Generator().manual_seed(42))
@@ -60,8 +70,9 @@ model.to(device)
 fn_loss.to(device)
 epochs=1
 train(train_loader,model,fn_loss,optimizer,epochs)
-full_loss,accuracy=evaluate(val_loader,model,fn_loss)
+full_loss,accuracy,chackpoint=evaluate(val_loader,model,fn_loss)
 print(full_loss,accuracy)
+print(chackpoint)
 
 #看看模型训练的效果
 img, label = train_set[0]  # 取第0号样本（第一张图+它的标签）
