@@ -42,7 +42,7 @@ class MYMODEL(nn.Module):
         self.linear=nn.Linear(8,2)
     def forward(self, input):
         out, hn = self.rnn(input)  # 拆包 只拿out去做下一层的rnn即可
-        output = self.linear(out[:, -1, :])
+        output = self.linear(out[:, -1, :]) #取最后时间步进linear
         return output  # logits
 
 
