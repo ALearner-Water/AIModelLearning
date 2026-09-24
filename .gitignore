@@ -45,6 +45,12 @@ wandb/
 *.pth
 *.ckpt
 *.onnx
+*.tar.gz
+
+# PyTorch default dataset downloads (next to scripts)
+**/FashionMNIST/
+**/cifar-10-python*/
+**/cifar-10-batches-py/
 
 # Operating-system files
 .DS_Store
