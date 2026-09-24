@@ -23,7 +23,7 @@ class conv2dmodel(nn.Module):
         output=self.linear(output)
         return output
 
-dataset = torchvision.datasets.FashionMNIST(r"D:\53507\PythonAIModelLearning\Pytorch_basic\nn.cnn",
+dataset = torchvision.datasets.FashionMNIST(r"D:\53507\PythonAIModelLearning\Pytorch_basic\cnn",
                                        train=False,transform=torchvision.transforms.ToTensor(),download=True)
 loader=DataLoader(dataset,batch_size=64)
 model=conv2dmodel()

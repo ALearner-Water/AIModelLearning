@@ -57,10 +57,10 @@ python -m pip install -r requirements.txt
 ```powershell
 conda run -n dl-study python Python_basic/python_to_numpy/python_numpy_readiness_challenge.py
 conda run -n dl-study python Numpy_basic/numpy_final_challenge.py
-conda run -n dl-study python Pytorch_basic/pytorch_tensor_phase2_challenge.py
-conda run -n dl-study python Pytorch_basic/pytorch_Autograd.py
-conda run -n dl-study python Pytorch_basic/dataset_basics.py
-conda run -n dl-study python Pytorch_basic/dataloader_training_loop.py
+conda run -n dl-study python Pytorch_basic/pytorch_class/tensor/tensor_phase2_challenge.py
+conda run -n dl-study python Pytorch_basic/pytorch_class/autograd/autograd.py
+conda run -n dl-study python Pytorch_basic/pytorch_class/dataset_dataloader/dataset_basics.py
+conda run -n dl-study python Pytorch_basic/pytorch_class/dataset_dataloader/dataloader_training_loop.py
 ```
 
 2026-09-05 复验结果：以上六条命令均正常退出；Python→NumPy 显示“全部通过”，NumPy 为 `8/8`，PyTorch Tensor 第二阶段为 `6/6`，批训练脚本最终 loss 小于 `0.01`。

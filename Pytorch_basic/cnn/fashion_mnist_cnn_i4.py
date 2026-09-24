@@ -58,7 +58,7 @@ def evaluate(loader,model,fn_loss):
 
         return full_loss/data_size,accuracy/data_size,checkpoint
 
-dataset=torchvision.datasets.FashionMNIST(root=r"D:\53507\PythonAIModelLearning\Pytorch_basic\nn.cnn",train=True,transform=torchvision.transforms.ToTensor(),download=True)
+dataset=torchvision.datasets.FashionMNIST(root=r"D:\53507\PythonAIModelLearning\Pytorch_basic\cnn",train=True,transform=torchvision.transforms.ToTensor(),download=True)
 train_set, val_set = random_split(dataset, lengths=[50000, 10000], generator=torch.Generator().manual_seed(42))
 train_loader=DataLoader(train_set,batch_size=64,shuffle=True)
 val_loader=DataLoader(val_set,batch_size=64,shuffle=False)

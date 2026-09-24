@@ -1,10 +1,10 @@
 $scripts = @(
     'Python_basic/python_to_numpy/python_numpy_readiness_challenge.py'
     'Numpy_basic/numpy_final_challenge.py'
-    'Pytorch_basic/pytorch_tensor_phase2_challenge.py'
-    'Pytorch_basic/pytorch_Autograd.py'
-    'Pytorch_basic/dataset_basics.py'
-    'Pytorch_basic/dataloader_training_loop.py'
+    'Pytorch_basic/pytorch_class/tensor/tensor_phase2_challenge.py'
+    'Pytorch_basic/pytorch_class/autograd/autograd.py'
+    'Pytorch_basic/pytorch_class/dataset_dataloader/dataset_basics.py'
+    'Pytorch_basic/pytorch_class/dataset_dataloader/dataloader_training_loop.py'
 )
 
 foreach ($script in $scripts) {
